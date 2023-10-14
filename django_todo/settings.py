@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 if os.path.isfile("env.py"):
     import env
@@ -29,6 +30,8 @@ SECRET_KEY = 'django-insecure-58g6y44obw6zfe(32+8immoemr)wol+=7zycn4jq01!^6f1l81
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-psebastian96-firstdjango-xla5uy0f46.us2.codeanyapp.com']
+
+ALLOWED_HOSTS = ['my-first-django-todo-d828cefdce44.herokuapp.com']
 
 
 # Application definition
@@ -85,8 +88,9 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': os.environ.get("DATABASE_URL")
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
