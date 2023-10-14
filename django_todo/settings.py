@@ -31,7 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-psebastian96-firstdjango-xla5uy0f46.us2.codeanyapp.com']
 
-ALLOWED_HOSTS = os.environ.get("HEROKU_HOST")
+ALLOWED_HOSTS = os.environ.get(
+    "my-first-django-todo-d828cefdce44.herokuapp.com")
 
 
 # Application definition
