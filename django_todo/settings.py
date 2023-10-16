@@ -85,14 +85,14 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 if development:
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
- }
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
 else:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL")
-    )}
+    DATABASES = {'default': dj_database_url.parse(os.environ.get
+                 ("DATABASE_URL"))}
 
 
 # Password validation
