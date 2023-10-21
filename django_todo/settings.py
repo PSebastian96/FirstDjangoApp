@@ -32,7 +32,8 @@ SECRET_KEY = 'django-insecure-58g6y44obw6zfe(32+8immoemr)wol+=7zycn4jq01!^6f1l81
 DEBUG = development
 
 if development:
-    ALLOWED_HOSTS = ['localhost']
+    ALLOWED_HOSTS = [
+        '8000-psebastian96-firstdjango-xla5uy0f46.us2.codeanyapp.com']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOST')]
 
@@ -88,8 +89,8 @@ if development:
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
-            }
         }
+    }
 else:
     DATABASES = {'default': dj_database_url.parse(os.environ.get
                  ("DATABASE_URL"))}
